@@ -18,17 +18,17 @@ import java.util.Map;
 @RequestMapping("/pk/")
 public class BotInfoController {
     @RequestMapping("getbotinfo/")
-    public  List<Map<String,String>> getInfo() {
-        List<Map<String, String>> list = new LinkedList<>();
+    public  Map<String,String> getInfo() {
+//        List<Map<String, String>> list = new LinkedList<>();
         Map<String,String>bot1=new HashMap<>();
         bot1.put("name","wpf");
         bot1.put("rating","8000");
-        Map<String,String>bot2=new HashMap<>();
-        bot2.put("name","zzz");
-        bot2.put("rating","1550");
-        list.add(bot1);
-        list.add(bot2);
-        return list;
+//        Map<String,String>bot2=new HashMap<>();
+//        bot2.put("name","zzz");
+//        bot2.put("rating","1550");
+//        list.add(bot1);
+//        list.add(bot2);
+        return bot1;
     }
 
 }
