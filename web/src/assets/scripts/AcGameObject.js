@@ -44,11 +44,11 @@ const step=(timestamp)=>{
             obj.start();
         }else{
             obj.timedelta=timestamp-last_timestamp;
-            obj.update(); //画地图
+            obj.update();
         }
     }
     last_timestamp=timestamp;
     requestAnimationFrame(step)
 }
-/*在刷新前执行一次，浏览器默认每秒啥刷新60次*/
+
 requestAnimationFrame(step)
