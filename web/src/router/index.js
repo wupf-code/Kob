@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import PkIndexVue from "@/views/pk/PkIndexVue";
-import RanklistIndexVue from "@/views/ranklist/RanklistIndexVue";
-import RecordIndexVue  from "@/views/record/RecordIndexVue";
-import UserBotIndexVue from "@/views/user/bots/UserBotIndexVue";
+import PkIndexVue from "@/views/pk/PkIndexView";
+import RanklistIndexVue from "@/views/ranklist/RanklistIndexView";
+import RecordIndexVue  from "@/views/record/RecordIndexView";
+import UserBotIndexVue from "@/views/user/bots/UserBotIndexView";
 import NotFound from "@/views/error/NotFound";
-
+import UserAccountLoginView from "@/views/user/account/UserAccountLoginView";
+import UserAccountRegisterView from "@/views/user/account/UserAccountRegisterView";
 const routes = [
   {
     path:"/",
@@ -25,6 +26,16 @@ const routes = [
     path:"/ranklist/",
     name:"ranklist_index",
     component:RanklistIndexVue ,
+  },
+  {
+    path:"/user/account/login/",
+    name:"user_account_login",
+    component:UserAccountLoginView,
+  },
+  {
+    path:"/user/account/register/",
+    name:"user_account_register",
+    component:UserAccountRegisterView,
   },
   {
     path:"/user/bot/",

@@ -17,8 +17,6 @@ export default {
       onMounted(()=>{
         new GameMap(canvas.value.getContext('2d'),parent.value)
       });
-      console.log(parent.value);
-      console.log(canvas.value);
       return {
         parent,
         canvas
