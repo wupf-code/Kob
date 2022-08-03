@@ -44,14 +44,14 @@ public class AddServiceImpl implements AddService {
             map.put("error_message", "长度不能大于100");
             return map;
         }
-        if(description == null){
+        if(description == null || description.length() == 0){
             description = "这个用户很懒，什么也没有留下";
         }
         if( description.length() > 500){
             map.put("error_message", "bot描述不能大于500");
             return map;
         }
-        if(content.length() == 0 && content == null){
+        if(content.length() == 0 || content == null){
             map.put("error_message", "代码不能为空");
             return map;
         }
