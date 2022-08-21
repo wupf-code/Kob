@@ -34,5 +34,6 @@ div.game-map{
   display: flex;
   justify-content: center;
   align-items: center;
+  /*background: red;*/
 }
 </style>
