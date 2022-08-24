@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import ContentFiled from "@/components/ContentFiled";
+import ContentFiled from "@/components/ContentField";
 
 export default {
   name: "RanklistIndexVue",

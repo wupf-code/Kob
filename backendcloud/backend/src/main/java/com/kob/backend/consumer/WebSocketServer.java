@@ -41,7 +41,7 @@ public class WebSocketServer {
 
     private static BotMapper botMapper;
     //注入usermapper
-    private static UserMapper userMapper;
+    public static UserMapper userMapper;
     public static RecordMapper recordMapper;
 
     public static RestTemplate restTemplate;

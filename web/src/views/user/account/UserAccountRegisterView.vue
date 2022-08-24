@@ -29,7 +29,7 @@
 import { ref } from "vue";
 import router from "@/router";
 import {useStore} from "vuex";
-import ContentFiled from "@/components/ContentFiled";
+import ContentFiled from "@/components/ContentField";
 import $ from "jquery"
 export default {
   name: "UserAccountRegisterView",

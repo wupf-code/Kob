@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import ContentFiled from "@/components/ContentFiled";
+import ContentFiled from "@/components/ContentField";
 import { useStore } from "vuex";
 import {ref} from "vue";
 import router from "@/router";
