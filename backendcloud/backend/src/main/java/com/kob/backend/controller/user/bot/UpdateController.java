@@ -19,7 +19,7 @@ public class UpdateController {
     @Autowired
     private UpdateService updateService;
 
-    @PostMapping("/user/bot/update/")
+    @PostMapping("/api/user/bot/update/")
     public Map<String, String> update(@RequestParam Map<String, String>data){
         System.out.println(data.toString());
         return updateService.update(data);

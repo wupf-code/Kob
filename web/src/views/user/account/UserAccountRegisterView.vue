@@ -45,7 +45,7 @@ export default {
 
     const register = ()=>{
       $.ajax({
-        url:"http://localhost:3000/user/account/register/",
+        url:"https://snakechess.ymswdfg.top/api/user/account/register/",
         type:"post",
         data:{
           username:username.value,

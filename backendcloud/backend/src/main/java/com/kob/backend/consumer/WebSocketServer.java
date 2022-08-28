@@ -59,7 +59,7 @@ public class WebSocketServer {
     public void onOpen(Session session, @PathParam("token") String token) throws IOException {
         // 建立连接
         this.session = session;
-        System.out.println("connected");
+//        System.out.println("connected");
         int userId = JwtAuthentication.getUserId(token);
         this.user = userMapper.selectById(userId);
 
@@ -69,7 +69,7 @@ public class WebSocketServer {
         }else {
             this.session.close();
         }
-        System.out.println(users);
+//        System.out.println(users);
     }
 
     @OnClose
@@ -119,7 +119,7 @@ public class WebSocketServer {
         users.get(b.getId()).sendMessage(respB.toJSONString());
     }
     private void startMatching(Integer botId){
-        System.out.println("开始匹配");
+//        System.out.println("开始匹配");
         MultiValueMap<String, String> data = new LinkedMultiValueMap<>();
         data.add("user_id", this.user.getId().toString());
         data.add("rating", this.user.getRating().toString());
@@ -127,7 +127,7 @@ public class WebSocketServer {
         restTemplate.postForObject(addPlayerUrl, data, String.class);
     }
     private  void stopMatching(){
-        System.out.println("结束匹配");
+//        System.out.println("结束匹配");
         MultiValueMap<String, String> data = new LinkedMultiValueMap<>();
         data.add("user_id", this.user.getId().toString());
         restTemplate.postForObject(removePlayerUrl, data, String.class);
@@ -145,7 +145,7 @@ public class WebSocketServer {
     @OnMessage
     public void onMessage(String message, Session session) {
         // 从Client接收消息
-        System.out.println("receive message");
+//        System.out.println("receive message");
         //解析前端发送的信息
         JSONObject data = JSONObject.parseObject(message);
 

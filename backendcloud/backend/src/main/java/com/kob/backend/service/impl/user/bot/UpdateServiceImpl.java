@@ -25,9 +25,9 @@ public class UpdateServiceImpl implements UpdateService {
                 (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl loginUser = (UserDetailsImpl) authenticationToken.getPrincipal();
         User user = loginUser.getUser();
-        System.out.println(data.toString());
+//        System.out.println(data.toString());
         int bot_id = Integer.parseInt(data.get("bot_id"));
-        System.out.println(bot_id);
+//        System.out.println(bot_id);
 
         String title = data.get("title");
         String description = data.get("description");
