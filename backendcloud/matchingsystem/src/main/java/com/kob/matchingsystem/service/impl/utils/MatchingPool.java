@@ -86,7 +86,7 @@ public class MatchingPool extends Thread{
     }
 
     public  void sendResult(Player a, Player b) {
-        System.out.printf("send result " + a + " " + b);
+//        System.out.printf("send result " + a + " " + b);
         MultiValueMap<String, String> data = new LinkedMultiValueMap<>();
         data.add("a_id", a.getUserId().toString());
         data.add("a_bot_id", a.getBotID().toString());

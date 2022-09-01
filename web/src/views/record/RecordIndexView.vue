@@ -91,7 +91,7 @@ export default {
     const pull_page = page => {
       current_page = page;
       $.ajax({
-        url: "https://snakechess.ymswdfg.top/api/record/getlist/",
+        url: "https://snake.ymswdfg.top/api/record/getlist/",
         data: {
           page,
         },

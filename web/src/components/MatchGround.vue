@@ -61,7 +61,7 @@ export default {
     }
     const refresh_bots = () => {
       $.ajax({
-        url: "https://snakechess.ymswdfg.top/api/user/bot/getlist/",
+        url: "https://snake.ymswdfg.top/api/user/bot/getlist/",
         type: 'get',
         headers: {
           Authorization: "Bearer " + store.state.user.token,

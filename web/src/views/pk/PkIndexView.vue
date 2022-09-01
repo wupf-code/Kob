@@ -23,7 +23,7 @@ export default {
   setup(){
     const store = useStore();
     let socket = null;
-    const socketUrl = `wss://snakechess.ymswdfg.top/websocket/${store.state.user.token}/`;
+    const socketUrl = `wss://snake.ymswdfg.top/websocket/${store.state.user.token}/`;
     store.commit("updateLoser", "none");
     store.commit("updateIsRecord", false);
     onMounted(() =>{

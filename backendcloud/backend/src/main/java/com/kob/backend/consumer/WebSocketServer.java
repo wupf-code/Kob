@@ -75,7 +75,7 @@ public class WebSocketServer {
     @OnClose
     public void onClose() {
         // 关闭链接
-        System.out.println("disconnected");
+//        System.out.println("disconnected");
         if(this.user != null) {
             users.remove(this.user.getId());
         }

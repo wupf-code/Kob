@@ -35,7 +35,7 @@ export default {
     actions: {
         login(context, data){
             $.ajax({
-                url:"https://snakechess.ymswdfg.top/api/user/account/token/",
+                url:"https://snake.ymswdfg.top/api/user/account/token/",
                 type:"post",
                 data:{
                     username:data.username,
@@ -58,7 +58,7 @@ export default {
         },
         getinfo(context,data){
             $.ajax({
-                url:"https://snakechess.ymswdfg.top/api/user/account/info/",
+                url:"https://snake.ymswdfg.top/api/user/account/info/",
                 type:"get",
                 headers:{
                     Authorization:"Bearer "+context.state.token,
