@@ -52,9 +52,7 @@ export default {
           password:password.value,
           confirmedPassword:confirmedPassword.value,
         },
-        header:{
-          Authorization: "Bearer " + store.state.user.token
-        },
+
         success(resp){
           if(resp.error_message === "success"){
             router.push({name: "user_account_login"});
@@ -75,6 +73,7 @@ export default {
       confirmedPassword,
       error_message,
       register,
+      store,
     }
   }
 
