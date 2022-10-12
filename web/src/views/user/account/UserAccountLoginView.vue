@@ -15,6 +15,12 @@
             <div class="error_message">{{ error_message }}</div>
             <button type="submit" class="btn btn-primary">登录</button>
           </form>
+          <div @click="qq_login">
+            <img height="30"
+                 style="cursor: pointer;"
+                 src="https://s1.ax1x.com/2022/10/12/xUdyE4.png"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -26,6 +32,7 @@ import ContentFiled from "@/components/ContentField";
 import { useStore } from "vuex";
 import {ref} from "vue";
 import router from "@/router";
+import $ from 'jquery';
 export default {
   name: "UserAccountLoginView",
   components:{
@@ -69,13 +76,24 @@ export default {
             error_message.value = "用户名或密码错误";
           }
         })
+    };
+    const qq_login = () => {
+      $.ajax({
+        url: "https://snake.ymswdfg.top/api/user/account/qq/apply_code/",
+        type: "GET",
+        success: resp => {
+          if (resp.result === "success") {
+            window.location.replace(resp.apply_code_url);
+          }
+        }
+      })
     }
     return {
       username,
       password,
       error_message,
       login,
-
+      qq_login,
     }
   }
 }
